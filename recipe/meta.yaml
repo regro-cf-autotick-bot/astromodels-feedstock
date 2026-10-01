@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/astromodels-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/astromodels-{{ version }}.tar.gz
   sha256: 8e9e3a277b24eded7a4e7149857df0be4abe70921a219c15a4d55dc1a935e13e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   skip: true  # [win]
   skip: true  # [py<=310]
   skip: true  # [py>=313]
